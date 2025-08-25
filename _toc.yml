@@ -1,0 +1,24 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: Pengantar Web Mining
+- file: Web Crawling
+- file: Web Data Preprocessing 
+- file: Pembelajaran Terawasi (Supervised Learning) 
+- file: Pembelajaran Tak terawasi (Unsupervised Learning)
+- file: Web Content Mining ( text mining)
+- file: Web Usage Mining 
+- file: Web structure Mining (graph mining)
+- file: Deployment System
+
+
+
+
+
+
+
+
+
