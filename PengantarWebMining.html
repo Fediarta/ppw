@@ -377,13 +377,17 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-web-mining">Pengertian web mining</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-web-mining">Jenis - Jenis Web Mining</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#web-content-mining">Web Content Mining</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#web-content-mining">Web Content Mining</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-content-mining">Contoh Content Mining</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#web-structure-mining">Web Structure Mining</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#web-usage-mining">Web Usage Mining</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-dalam-web-mining">Proses dalam Web mining</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-web-mining">Penerapan Web Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referensi">Referensi</a></li>
 </ul>
             </nav>
         </div>
@@ -399,45 +403,68 @@ document.write(`
 <h1>Pencarian dan Penambangan web<a class="headerlink" href="#pencarian-dan-penambangan-web" title="Link to this heading">#</a></h1>
 <section id="pengertian-web-mining">
 <h2>Pengertian web mining<a class="headerlink" href="#pengertian-web-mining" title="Link to this heading">#</a></h2>
-<p>Web Mining adalah Proses menemukan dan mengekstrak informasi dari internet menggunakan teknik penambangan data. web mining mengimplementasikan teknik Data Mining untuk menggali dan mengekstraksi informasi otomatis dari data yang tersimpan di web. namun, web mining memiliki perbedaan dengan data mining karena data web bersifat tidak terstruktur dan tersebar diberbagai sumber. web mining pertama kali dikenalkan oleh Etzioni Oren pada tahun 1996.</p>
+<p>Web Mining adalah Metode untuk  menemukan dan mengekstrak informasi dari internet menggunakan teknik penambangan data. web mining menerapkan teknik Data Mining untuk menggali dan memperoleh informasi otomatis dari data yang tersimpan di web. namun, web mining berbeda dengan data mining karena  informasi atau data web umumnya bersifat tidak terstruktur dan tersebar diberbagai sumber. Istilah web mining pertama kali dikenalkan oleh Etzioni Oren pada tahun 1996.</p>
 </section>
 <section id="jenis-jenis-web-mining">
 <h2>Jenis - Jenis Web Mining<a class="headerlink" href="#jenis-jenis-web-mining" title="Link to this heading">#</a></h2>
 <p>Web Mining  dibagi menjadi 3 bagian utama :</p>
 <section id="web-content-mining">
 <h3>Web Content Mining<a class="headerlink" href="#web-content-mining" title="Link to this heading">#</a></h3>
-<p>Web content Mining adalah suatu proses otomatis untuk menemukan informasi yang berguna atau dibutuhkan dari dokumen atau data. Teknik Web Content mining berfokus pada penggalian informasi dari isi (content) web, seperti Teks, gambar, Audio, Video, Metadata dan Hyperlink. Ada 2 strategi yang umum dilakukan :</p>
-<ol class="arabic simple">
-<li><p>dengan cara menambang langsung terhadap data.</p></li>
-<li><p>dengan cara melakukan pencarian serta mengimprove hasil pencarian seperti search engine.</p></li>
-</ol>
+<p>Web content Mining adalah suatu langkah otomatis untuk menemukan informasi yang berguna atau dibutuhkan dari dokumen atau data. Teknik Web Content mining berfokus pada Ekstraksi informasi dari isi (content) web, seperti Teks(Artikel,deskripsi,komentar), gambar(foto,ilustrasi), Audio(rekaman suara), Video(streaming clip), Metadata dan Hyperlink. Ada 2 pendekatan yang umum dilakukan :</p>
+<p>1.dengan cara menambang langsung terhadap data yang ada.</p>
+<p>2.dengan cara melakukan pencarian dan meningkatkan hasil pencarian seperti search engine.</p>
+<section id="contoh-content-mining">
+<h4>Contoh Content Mining<a class="headerlink" href="#contoh-content-mining" title="Link to this heading">#</a></h4>
+<p>1.Klasifikasi Dokumen</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>tujuan: untuk mengkategorikan dokumen atau gambar yang belum pernah dilihat kedalam kelas seakurat mungkin.
+
+metode klasifikasi: Naive Bayes, Support Vektor Machines,Jaringan saraf tiruan,transformers.
+</pre></div>
+</div>
+<p>2.pengelompokan konten(content clustering)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pengelompokkan dokumen dengan mengukur kesamaan antar dokumen, dalam satu kelompok lebih mirip satu sama lain kemudian kelompok lain dengan dokumen berbeda antar satu sama lain.
+
+metode yang digunakan algoritma k-means ,pengelompokkan hierarkis, s-bert
+</pre></div>
+</div>
+<p>3.Analisis Sentimen</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mengklasifikasikan teks yang diberikan pada tingkat dokumen,kalimat, atau fitur/atribut.
+</pre></div>
+</div>
+<p>4.Ekstraksi Informasi</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pengambilan informasi terstruktur secara otomatis dari konten web yang tidak terstruktur atau semi- struktur dari isi web
+</pre></div>
+</div>
+</section>
 </section>
 <section id="web-structure-mining">
 <h3>Web Structure Mining<a class="headerlink" href="#web-structure-mining" title="Link to this heading">#</a></h3>
-<p>Web Structure Mining adalah teknik yang digunakan untuk menemukan struktur link dari hyperlink sehingga diketahui keterkaitan antara suatu halaman web dengan halaman web lainnya. kemudian dari situ dapat dibangun  rangkuman website . kategori ini dari weeb mining berfokus pada penggalian informasi dari isi (content) yang disajikan web.</p>
+<p>Web Structure Mining adalah teknik yang dimanfaatkan untuk mempelajari pola struktur link dari hyperlink sehingga diketahui hubungan antara suatu halaman web dengan halaman web lainnya. kemudian dari situ dapat dibangun  rangkuman website . kategori ini dari web mining berfokus pada penggalian informasi dari isi (content) yang disajikan web.</p>
 </section>
 <section id="web-usage-mining">
 <h3>Web Usage Mining<a class="headerlink" href="#web-usage-mining" title="Link to this heading">#</a></h3>
-<p>Web Usage Mining adalah teknik yang selalu mengedepankan penggalian pada pola (pattern) dari pengguna dalam mengakses halaman-halaman web yang ditandai dari log, click,stream,cookies, dan query. maafaatnya untuk melakukan perubahan halaman berdasarkan profil pengguna,menentukan ketertarikan pelanggan terhadap produk dan menentukan target market yang sesuai.</p>
+<p>Web Usage Mining adalah metode yang berfokus untuk analisis pada pola (pattern) dari pengguna dalam mengakses halaman-halaman web yang ditandai dari log, click,stream,cookies, dan query. manfaatnya untuk melakukan perubahan halaman berdasarkan profil pengguna,menentukan ketertarikan pelanggan terhadap produk dan menentukan target market yang sesuai.contoh dari teknik ini yaitu product recomendasi produk yang paling di sukai oleh pengguna berdasarkan data perilaku ,preferensi tau kesamaan dengan pengguna lain, personalized search (pencarian yang dipersonalisasikan) pencarian yang disesuaikan perilaku ,preverensi</p>
 </section>
 </section>
 <section id="proses-dalam-web-mining">
 <h2>Proses dalam Web mining<a class="headerlink" href="#proses-dalam-web-mining" title="Link to this heading">#</a></h2>
 <p>1.Pengumpulan data (Data Collection) : data diambil dari berbagai sumber diweb, seperti halaman web, file log server, media sosial, dll.</p>
-<p>2.Preprocessing (persiapan data): pembersihan data dan proses agar format data sesuai yang dibutuhkan. contohnya seperti penghapusan data ,mengatasi duplikasi,atau mengubah format.</p>
-<ol class="arabic simple" start="3">
-<li><p>Eksplorasi Data (Data Explorasi) : digunakan untuk menemukan pola atau hubungan yang relevan . menggunakan teknik statistik atau algoritma pembelajaran mesin untuk menganalisis data dan menemukan insight.</p></li>
-<li><p>Penafsiran(interpretation): setelah proses analisis maka hasil perlu ditafsirkan untuk mengambil keputusan atau memebuat kebijakan .</p></li>
-</ol>
+<p>2.Preprocessing (persiapan data): pembersihan data dan proses agar format data sesuai yang dibutuhkan. contohnya seperti penghapusan data yang tidak relevan,mengatasi duplikasi,atau mengubah format.</p>
+<p>3.Eksplorasi Data (Data Explorasi) : digunakan untuk mengidentifikasi pola atau hubungan yang relevan . menggunakan teknik statistik atau algoritma pembelajaran mesin untuk menganalisis data dan menemukan insight.</p>
+<p>4.Penafsiran(interpretation): setelah proses analisis maka hasil perlu ditafsirkan untuk mengambil keputusan atau memebuat kebijakan .</p>
 </section>
 <section id="penerapan-web-mining">
 <h2>Penerapan Web Mining<a class="headerlink" href="#penerapan-web-mining" title="Link to this heading">#</a></h2>
 <p>1.Mesin pencari web (google, yahoo) digunakan untuk mengidentifikasi halaman web.</p>
-<ol class="arabic simple" start="2">
-<li><p>sistem rekomendasi produk pada toko online.</p></li>
-</ol>
+<p>2.sistem rekomendasi produk pada toko online.</p>
 <p>3.analisis sentimen  dan opini publik di media sosial dan portal berita.</p>
 <p>4.pengomtimalan halaman web berdasarkan perilaku pengunjung.</p>
+</section>
+<section id="referensi">
+<h2>Referensi<a class="headerlink" href="#referensi" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://sis.binus.ac.id/2021/08/04/apa-itu-web-mining/">https://sis.binus.ac.id/2021/08/04/apa-itu-web-mining/</a></p>
+<p><a class="reference external" href="https://doc-pak.undip.ac.id/id/eprint/1659/1/Jurnal_JSINBIS_1_2.pdf">https://doc-pak.undip.ac.id/id/eprint/1659/1/Jurnal_JSINBIS_1_2.pdf</a></p>
+<p><a class="reference external" href="https://toffeedev.com/blog/seo/crm-3-langkah-menentukan-hasil-pencarian-di-search-engine/">https://toffeedev.com/blog/seo/crm-3-langkah-menentukan-hasil-pencarian-di-search-engine/</a></p>
 </section>
 </section>
 
@@ -498,13 +525,17 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-web-mining">Pengertian web mining</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-web-mining">Jenis - Jenis Web Mining</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#web-content-mining">Web Content Mining</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#web-content-mining">Web Content Mining</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-content-mining">Contoh Content Mining</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#web-structure-mining">Web Structure Mining</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#web-usage-mining">Web Usage Mining</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-dalam-web-mining">Proses dalam Web mining</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-web-mining">Penerapan Web Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referensi">Referensi</a></li>
 </ul>
   </nav></div>
 
