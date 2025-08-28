@@ -84,3 +84,6 @@ https://sis.binus.ac.id/2021/08/04/apa-itu-web-mining/
 https://doc-pak.undip.ac.id/id/eprint/1659/1/Jurnal_JSINBIS_1_2.pdf
 
 https://toffeedev.com/blog/seo/crm-3-langkah-menentukan-hasil-pencarian-di-search-engine/
+
+
+[Next Crawling] (Crawling)
