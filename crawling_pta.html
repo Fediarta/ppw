@@ -1,0 +1,1215 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Crawling web PTA UTM &#8212; Pencarian dan Penambangan Web</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'crawling_pta';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="web struktur" href="Crawling_berita_PPW.html" />
+    <link rel="prev" title="Crawling" href="Crawling.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/foto.jpg" class="logo__image only-light" alt="Pencarian dan Penambangan Web - Home"/>
+    <script>document.write(`<img src="_static/foto.jpg" class="logo__image only-dark" alt="Pencarian dan Penambangan Web - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Pencarian dan Penambangan web
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="PengantarWebMining.html">Pencarian dan Penambangan web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Crawling.html">Crawling</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Crawling web PTA UTM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Crawling_berita_PPW.html">web struktur</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcrawling_pta.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/crawling_pta.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Crawling web PTA UTM</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-link-data-text">Crawling Link data text</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="crawling-web-pta-utm">
+<h1>Crawling web PTA UTM<a class="headerlink" href="#crawling-web-pta-utm" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>builtwith
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: builtwith in c:\users\fedi arta\appdata\local\programs\python\python310\lib\site-packages (1.3.4)
+Requirement already satisfied: six in c:\users\fedi arta\appdata\local\programs\python\python310\lib\site-packages (from builtwith) (1.16.0)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 25.1.1 -&gt; 25.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">builtwith</span>
+
+<span class="c1"># Analisis teknologi yang digunakan</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">builtwith</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;https://pta.trunojoyo.ac.id&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;web-servers&#39;: [&#39;Nginx&#39;], &#39;javascript-frameworks&#39;: [&#39;jQuery&#39;, &#39;jQuery UI&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+<section id="crawling-link-data-text">
+<h2>Crawling Link data text<a class="headerlink" href="#crawling-link-data-text" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="k">def</span> <span class="nf">crawl_website</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>  <span class="c1"># Raise an error for bad status codes</span>
+
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Ambil semua judul h1, h2, h3</span>
+        <span class="n">headings</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">([</span><span class="s1">&#39;h1&#39;</span><span class="p">,</span> <span class="s1">&#39;h2&#39;</span><span class="p">,</span> <span class="s1">&#39;h3&#39;</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">heading</span> <span class="ow">in</span> <span class="n">headings</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">heading</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">heading</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Ambil semua link</span>
+        <span class="n">links</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">links</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;URL: </span><span class="si">{</span><span class="n">link</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> | Teks: </span><span class="si">{</span><span class="n">link</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Terjadi kesalahan saat mengakses </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Gunakan fungsi</span>
+<span class="n">crawl_website</span><span class="p">(</span><span class="s2">&quot;https://pta.trunojoyo.ac.id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>h2: Daftar Karya Ilmiah
+URL: index.html | Teks: 
+URL: # | Teks: 14677Journal
+URL: https://pta.trunojoyo.ac.id/ | Teks: Beranda
+URL: https://pta.trunojoyo.ac.id/c_search/ | Teks: Pencarian
+URL: https://pta.trunojoyo.ac.id/c_template/ | Teks: Download
+URL: https://library.trunojoyo.ac.id/detil.php?id=23 | Teks: Petunjuk Upload
+URL: https://pta.trunojoyo.ac.id/c_contact/ | Teks: Kontak
+URL: # | Teks: STRATEGI PENGEMBANGAN MAKANAN DAN MINUMAN KHAS PULAU GILIGENTING GUNA MENDUKUNG PARIWISATA BERKELANJUTAN
+URL: https://pta.trunojoyo.ac.id/welcome/detail/170361100003 | Teks: Selengkapnya
+URL: # | Teks: PERUMUSAN SANKSI PIDANA BAGI MASYARAKAT SEKITAR HUTAN YANG MELAKUKAN PENCURIAN KAYU MILIK NEGARA DALAM UNDANG-UNDANG NOMOR 18 TAHUN 2013
+URL: https://pta.trunojoyo.ac.id/welcome/detail/170111100053 | Teks: Selengkapnya
+URL: # | Teks: Peran Teor Motivasi Herzberg Sebagai Mediator Self Efficacy, Lingkungan Kerja Dalam Meningkatkan Prestasi Kerja Pegawai ( Kantor Jasa Penilai Publik Guntur Eki Andri dan Rekan Kota Surabaya )
+URL: https://pta.trunojoyo.ac.id/welcome/detail/160211100116 | Teks: Selengkapnya
+URL: https://pta.trunojoyo.ac.id/welcome/index/2 | Teks: 2
+URL: https://pta.trunojoyo.ac.id/welcome/index/3 | Teks: 3
+URL: https://pta.trunojoyo.ac.id/welcome/index/2 | Teks: &gt;
+URL: https://pta.trunojoyo.ac.id/welcome/index/4893 | Teks: »
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/1 | Teks: Hukum
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/1 | Teks: Ilmu Hukum
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/24 | Teks: Magister Ilmu Hukum
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/2 | Teks: Pertanian
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/2 | Teks: Teknologi Industri Pertanian
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/3 | Teks: Agribisnis
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/4 | Teks: Agroteknologi
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/5 | Teks: Ilmu Kelautan
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/35 | Teks: Manajemen Sumberdaya Perairan
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/37 | Teks: Magister Pengelolaan Sumber Daya Alam
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/3 | Teks: Ekonomi Dan Bisnis
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/6 | Teks: Ekonomi Pembangunan
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/7 | Teks: Manajemen
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/8 | Teks: Akuntansi
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/21 | Teks: D3 Akuntansi
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/22 | Teks: Magister Manajemen
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/25 | Teks: Magister Akuntansi
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/26 | Teks: D3 Enterpreneurship
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/36 | Teks: Magister Ilmu Ekonomi
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/41 | Teks: Doktor Ilmu Manajemen
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/4 | Teks: Teknik
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/9 | Teks: Teknik Industri
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/10 | Teks: Teknik Informatika
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/11 | Teks: Manajemen Informatika
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/19 | Teks: Teknik Multimedia Dan Jaringan
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/20 | Teks: Mekatronika
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/23 | Teks: Teknik Elektro
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/31 | Teks: Sistem Informasi
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/32 | Teks: Teknik Mesin
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/33 | Teks: Teknik Mekatronika
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/5 | Teks: Ilmu Sosial Dan Ilmu Budaya
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/12 | Teks: Sosiologi
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/13 | Teks: Ilmu Komunikasi
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/14 | Teks: Psikologi
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/15 | Teks: Sastra Inggris
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/6 | Teks: Keislaman
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/16 | Teks: Ekonomi Syariah
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/17 | Teks: Hukum Bisnis Syariah
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/7 | Teks: Ilmu Pendidikan
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/18 | Teks: Pgsd
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/27 | Teks: Pendidikan Bhs Dan Sastra Indonesia
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/28 | Teks: Pendidikan Informatika
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/29 | Teks: Pendidikan Ipa
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/30 | Teks: Pgpaud
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/38 | Teks: Pendidikan Profesi Guru
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/99 | Teks: Mbkm
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/99 | Teks: Mbkm
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/100 | Teks: Pascasarjana
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/39 | Teks: Magister Pendidikan Dasar
+URL: https://pta.trunojoyo.ac.id/c_search/byprod/40 | Teks: Doktor Pengelolaan Sumber Daya Alam
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/1 | Teks: Hukum
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/2 | Teks: Pertanian
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/3 | Teks: Ekonomi Dan Bisnis
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/4 | Teks: Teknik
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/5 | Teks: Ilmu Sosial Dan Ilmu Budaya
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/6 | Teks: Keislaman
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/7 | Teks: Ilmu Pendidikan
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/99 | Teks: Mbkm
+URL: https://pta.trunojoyo.ac.id/c_search/byfac/100 | Teks: Pascasarjana
+URL: http://trunojoyo.ac.id | Teks: www.trunojoyo.ac.id
+URL: http://e-journal.dikti.go.id | Teks: http://e-journal.dikti.go.id
+URL: # | Teks: 
+URL: # | Teks: 
+URL: # | Teks: 
+URL: # | Teks: 
+URL: # | Teks: 
+URL: # | Teks: 
+URL: # | Teks: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">def</span> <span class="nf">ptaa</span><span class="p">(</span>
+    <span class="n">max_page</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span>
+    <span class="n">delay</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Users</span><span class="se">\\</span><span class="s2">Fedi Arta</span><span class="se">\\</span><span class="s2">crawling_pta</span><span class="se">\\</span><span class="s2">pta.csv&quot;</span><span class="p">,</span>
+    <span class="n">progress_path</span><span class="o">=</span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Users</span><span class="se">\\</span><span class="s2">Fedi Arta</span><span class="se">\\</span><span class="s2">crawling_pta</span><span class="se">\\</span><span class="s2">progress.json&quot;</span>
+<span class="p">):</span>
+   
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;penulis&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;judul&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;pembimbing_pertama&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;pembimbing_kedua&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;abstrak_id&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;abstrak_en&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;prodi&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+
+    <span class="c1"># Buat folder kalau belum ada</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">save_path</span><span class="p">),</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">prodis</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Ilmu Hukum&quot;</span><span class="p">,</span>
+        <span class="mi">24</span><span class="p">:</span> <span class="s2">&quot;Magister Ilmu Hukum&quot;</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Teknologi Industri Pertanian&quot;</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;Agribisnis&quot;</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;Agroteknologi&quot;</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">&quot;Ilmu Kelautan&quot;</span><span class="p">,</span>
+        <span class="mi">35</span><span class="p">:</span> <span class="s2">&quot;Manajemen Sumberdaya Perairan&quot;</span><span class="p">,</span>
+        <span class="mi">37</span><span class="p">:</span> <span class="s2">&quot;Magister PSDAL&quot;</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="s2">&quot;Ekonomi Pembangunan&quot;</span><span class="p">,</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="s2">&quot;Manajemen&quot;</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s2">&quot;Akuntansi&quot;</span><span class="p">,</span>
+        <span class="mi">21</span><span class="p">:</span> <span class="s2">&quot;D3 Akuntansi&quot;</span><span class="p">,</span>
+        <span class="mi">22</span><span class="p">:</span> <span class="s2">&quot;Magister Manajemen&quot;</span><span class="p">,</span>
+        <span class="mi">25</span><span class="p">:</span> <span class="s2">&quot;Magister Akuntansi&quot;</span><span class="p">,</span>
+        <span class="mi">26</span><span class="p">:</span> <span class="s2">&quot;D3 Enterpreneurship&quot;</span><span class="p">,</span>
+        <span class="mi">36</span><span class="p">:</span> <span class="s2">&quot;Magister Ilmu Ekonomi&quot;</span><span class="p">,</span>
+        <span class="mi">41</span><span class="p">:</span> <span class="s2">&quot;Doktor Ilmu Manajemen&quot;</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s2">&quot;Teknik Industri&quot;</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s2">&quot;Teknik Informatika&quot;</span><span class="p">,</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="s2">&quot;Manajemen Informatika&quot;</span><span class="p">,</span>
+        <span class="mi">19</span><span class="p">:</span> <span class="s2">&quot;Teknik Multimedia dan Jaringan&quot;</span><span class="p">,</span>
+        <span class="mi">20</span><span class="p">:</span> <span class="s2">&quot;Mekatronika&quot;</span><span class="p">,</span>
+        <span class="mi">23</span><span class="p">:</span> <span class="s2">&quot;Teknik Elektro&quot;</span><span class="p">,</span>
+        <span class="mi">31</span><span class="p">:</span> <span class="s2">&quot;Sistem Informasi&quot;</span><span class="p">,</span>
+        <span class="mi">32</span><span class="p">:</span> <span class="s2">&quot;Teknik Mesin&quot;</span><span class="p">,</span>
+        <span class="mi">33</span><span class="p">:</span> <span class="s2">&quot;Teknik Mekatronika&quot;</span><span class="p">,</span>
+        <span class="mi">12</span><span class="p">:</span> <span class="s2">&quot;Sosiologi&quot;</span><span class="p">,</span>
+        <span class="mi">13</span><span class="p">:</span> <span class="s2">&quot;Ilmu Komunikasi&quot;</span><span class="p">,</span>
+        <span class="mi">14</span><span class="p">:</span> <span class="s2">&quot;Psikologi&quot;</span><span class="p">,</span>
+        <span class="mi">15</span><span class="p">:</span> <span class="s2">&quot;Sastra Inggris&quot;</span><span class="p">,</span>
+        <span class="mi">16</span><span class="p">:</span> <span class="s2">&quot;Ekonomi Syariah&quot;</span><span class="p">,</span>
+        <span class="mi">17</span><span class="p">:</span> <span class="s2">&quot;Hukum Bisnis Syariah&quot;</span><span class="p">,</span>
+        <span class="mi">18</span><span class="p">:</span> <span class="s2">&quot;PGSD&quot;</span><span class="p">,</span>
+        <span class="mi">27</span><span class="p">:</span> <span class="s2">&quot;Pendidikan Bhs &amp; Sastra Indonesia&quot;</span><span class="p">,</span>
+        <span class="mi">28</span><span class="p">:</span> <span class="s2">&quot;Pendidikan Informatika&quot;</span><span class="p">,</span>
+        <span class="mi">29</span><span class="p">:</span> <span class="s2">&quot;Pendidikan IPA&quot;</span><span class="p">,</span>
+        <span class="mi">30</span><span class="p">:</span> <span class="s2">&quot;PGPAUD&quot;</span><span class="p">,</span>
+        <span class="mi">38</span><span class="p">:</span> <span class="s2">&quot;Pendidikan Profesi Guru&quot;</span><span class="p">,</span>
+        <span class="mi">39</span><span class="p">:</span> <span class="s2">&quot;Magister Pendidikan Dasar&quot;</span><span class="p">,</span>
+        <span class="mi">40</span><span class="p">:</span> <span class="s2">&quot;Doktor PSDAL&quot;</span><span class="p">,</span>
+        <span class="mi">99</span><span class="p">:</span> <span class="s2">&quot;MBKM&quot;</span><span class="p">,</span>
+        <span class="mi">100</span><span class="p">:</span> <span class="s2">&quot;Pascasarjana&quot;</span>
+    <span class="p">}</span>
+
+    <span class="c1"># Load progress jika ada</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">progress_path</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">progress_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">progress</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">progress</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># Load data lama jika ada</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">save_path</span><span class="p">):</span>
+        <span class="n">df_old</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">save_path</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_old</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">df_old</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">prodi_id</span><span class="p">,</span> <span class="n">prodi_name</span> <span class="ow">in</span> <span class="n">prodis</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Mulai scrape prodi </span><span class="si">{</span><span class="n">prodi_name</span><span class="si">}</span><span class="s2"> (id=</span><span class="si">{</span><span class="n">prodi_id</span><span class="si">}</span><span class="s2">) ===&quot;</span><span class="p">)</span>
+
+            <span class="c1"># Mulai dari halaman terakhir jika ada progress</span>
+            <span class="n">start_page</span> <span class="o">=</span> <span class="n">progress</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">prodi_id</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_page</span><span class="p">,</span> <span class="n">max_page</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+                <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/</span><span class="si">{</span><span class="n">prodi_id</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">page</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">prodi_name</span><span class="si">}</span><span class="s2">] Scraping halaman </span><span class="si">{</span><span class="n">page</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+                <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+                <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+                <span class="n">jurnals</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;li[data-cat=&quot;#luxury&quot;]&#39;</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">jurnals</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">prodi_name</span><span class="si">}</span><span class="s2">] Habis di halaman </span><span class="si">{</span><span class="n">page</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="k">break</span>
+
+                <span class="k">for</span> <span class="n">jurnal</span> <span class="ow">in</span> <span class="n">jurnals</span><span class="p">:</span>
+                    <span class="n">detail_url</span> <span class="o">=</span> <span class="n">jurnal</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.gray.button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+                    <span class="n">detail_res</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">detail_url</span><span class="p">)</span>
+                    <span class="n">soup1</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">detail_res</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+
+                    <span class="n">isi</span> <span class="o">=</span> <span class="n">soup1</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div#content_journal&#39;</span><span class="p">)</span>
+
+                    <span class="n">judul</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+                    <span class="n">penulis</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span> <span class="ow">and</span> <span class="s2">&quot;Penulis&quot;</span> <span class="ow">in</span> <span class="n">t</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; : &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                    <span class="n">pembimbing_pertama</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span> <span class="ow">and</span> <span class="s2">&quot;Dosen Pembimbing I&quot;</span> <span class="ow">in</span> <span class="n">t</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; : &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                    <span class="n">pembimbing_kedua</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span> <span class="ow">and</span> <span class="s2">&quot;Dosen Pembimbing II&quot;</span> <span class="ow">in</span> <span class="n">t</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; :&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+                    <span class="n">abstrak_paragraphs</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s2">&quot;justify&quot;</span><span class="p">)</span>
+                    <span class="n">abstrak_id</span> <span class="o">=</span> <span class="n">abstrak_paragraphs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">abstrak_paragraphs</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+                    <span class="n">abstrak_en</span> <span class="o">=</span> <span class="n">abstrak_paragraphs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">abstrak_paragraphs</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+
+                    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;penulis&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">penulis</span><span class="p">)</span>
+                    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;judul&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">judul</span><span class="p">)</span>
+                    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pembimbing_pertama&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pembimbing_pertama</span><span class="p">)</span>
+                    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pembimbing_kedua&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pembimbing_kedua</span><span class="p">)</span>
+                    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;abstrak_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">abstrak_id</span><span class="p">)</span>
+                    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;abstrak_en&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">abstrak_en</span><span class="p">)</span>
+                    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;prodi&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prodi_name</span><span class="p">)</span>
+                    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;url&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">detail_url</span><span class="p">)</span>
+
+                    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
+
+                <span class="c1"># Simpan data ke CSV setiap selesai 1 halaman</span>
+                <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+                <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">save_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span>
+
+                <span class="c1"># Simpan progress</span>
+                <span class="n">progress</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">prodi_id</span><span class="p">)]</span> <span class="o">=</span> <span class="n">page</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">progress_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">progress</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Scraping dihentikan oleh user. Progress disimpan.&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Terjadi error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">. Progress disimpan.&quot;</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="c1"># Simpan data terakhir dan progress</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">save_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">progress_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">progress</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Data terakhir berhasil disimpan di </span><span class="si">{</span><span class="n">save_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Progress scraping disimpan di </span><span class="si">{</span><span class="n">progress_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ptaa</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== Mulai scrape prodi Ilmu Hukum (id=1) ===
+[Ilmu Hukum] Scraping halaman 285 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/1/285
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Ilmu Hukum] Habis di halaman 284
+
+=== Mulai scrape prodi Magister Ilmu Hukum (id=24) ===
+[Magister Ilmu Hukum] Scraping halaman 15 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/24/15
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Magister Ilmu Hukum] Habis di halaman 14
+
+=== Mulai scrape prodi Teknologi Industri Pertanian (id=2) ===
+[Teknologi Industri Pertanian] Scraping halaman 115 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/2/115
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Teknologi Industri Pertanian] Habis di halaman 114
+
+=== Mulai scrape prodi Agribisnis (id=3) ===
+[Agribisnis] Scraping halaman 111 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/3/111
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Agribisnis] Habis di halaman 110
+
+=== Mulai scrape prodi Agroteknologi (id=4) ===
+[Agroteknologi] Scraping halaman 117 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/4/117
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Agroteknologi] Habis di halaman 116
+
+=== Mulai scrape prodi Ilmu Kelautan (id=5) ===
+[Ilmu Kelautan] Scraping halaman 97 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/5/97
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Ilmu Kelautan] Habis di halaman 96
+
+=== Mulai scrape prodi Manajemen Sumberdaya Perairan (id=35) ===
+[Manajemen Sumberdaya Perairan] Scraping halaman 3 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/35/3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Manajemen Sumberdaya Perairan] Habis di halaman 2
+
+=== Mulai scrape prodi Magister PSDAL (id=37) ===
+[Magister PSDAL] Scraping halaman 2 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/37/2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Magister PSDAL] Habis di halaman 1
+
+=== Mulai scrape prodi Ekonomi Pembangunan (id=6) ===
+[Ekonomi Pembangunan] Scraping halaman 119 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/6/119
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Ekonomi Pembangunan] Habis di halaman 118
+
+=== Mulai scrape prodi Manajemen (id=7) ===
+[Manajemen] Scraping halaman 208 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/7/208
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Manajemen] Habis di halaman 207
+
+=== Mulai scrape prodi Akuntansi (id=8) ===
+[Akuntansi] Scraping halaman 178 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/8/178
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Akuntansi] Habis di halaman 177
+
+=== Mulai scrape prodi D3 Akuntansi (id=21) ===
+[D3 Akuntansi] Scraping halaman 32 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/21/32
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D3 Akuntansi] Habis di halaman 31
+
+=== Mulai scrape prodi Magister Manajemen (id=22) ===
+[Magister Manajemen] Scraping halaman 15 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/22/15
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Magister Manajemen] Habis di halaman 14
+
+=== Mulai scrape prodi Magister Akuntansi (id=25) ===
+[Magister Akuntansi] Scraping halaman 20 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/25/20
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Magister Akuntansi] Habis di halaman 19
+
+=== Mulai scrape prodi D3 Enterpreneurship (id=26) ===
+[D3 Enterpreneurship] Scraping halaman 16 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/26/16
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D3 Enterpreneurship] Habis di halaman 15
+
+=== Mulai scrape prodi Magister Ilmu Ekonomi (id=36) ===
+[Magister Ilmu Ekonomi] Scraping halaman 3 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/36/3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Magister Ilmu Ekonomi] Habis di halaman 2
+
+=== Mulai scrape prodi Doktor Ilmu Manajemen (id=41) ===
+[Doktor Ilmu Manajemen] Scraping halaman 1 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/41/1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Doktor Ilmu Manajemen] Habis di halaman 0
+
+=== Mulai scrape prodi Teknik Industri (id=9) ===
+[Teknik Industri] Scraping halaman 144 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/9/144
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Teknik Industri] Habis di halaman 143
+
+=== Mulai scrape prodi Teknik Informatika (id=10) ===
+[Teknik Informatika] Scraping halaman 173 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/10/173
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Teknik Informatika] Habis di halaman 172
+
+=== Mulai scrape prodi Manajemen Informatika (id=11) ===
+[Manajemen Informatika] Scraping halaman 57 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/11/57
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Manajemen Informatika] Habis di halaman 56
+
+=== Mulai scrape prodi Teknik Multimedia dan Jaringan (id=19) ===
+[Teknik Multimedia dan Jaringan] Scraping halaman 28 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/19/28
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Teknik Multimedia dan Jaringan] Habis di halaman 27
+
+=== Mulai scrape prodi Mekatronika (id=20) ===
+[Mekatronika] Scraping halaman 29 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/20/29
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Mekatronika] Habis di halaman 28
+
+=== Mulai scrape prodi Teknik Elektro (id=23) ===
+[Teknik Elektro] Scraping halaman 35 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/23/35
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Teknik Elektro] Habis di halaman 34
+
+=== Mulai scrape prodi Sistem Informasi (id=31) ===
+[Sistem Informasi] Scraping halaman 1 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/31/1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Sistem Informasi] Habis di halaman 0
+
+=== Mulai scrape prodi Teknik Mesin (id=32) ===
+[Teknik Mesin] Scraping halaman 1 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/32/1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Teknik Mesin] Habis di halaman 0
+
+=== Mulai scrape prodi Teknik Mekatronika (id=33) ===
+[Teknik Mekatronika] Scraping halaman 4 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/33/4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Teknik Mekatronika] Habis di halaman 3
+
+=== Mulai scrape prodi Sosiologi (id=12) ===
+[Sosiologi] Scraping halaman 137 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/12/137
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Sosiologi] Habis di halaman 136
+
+=== Mulai scrape prodi Ilmu Komunikasi (id=13) ===
+[Ilmu Komunikasi] Scraping halaman 136 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/13/136
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Ilmu Komunikasi] Habis di halaman 135
+
+=== Mulai scrape prodi Psikologi (id=14) ===
+[Psikologi] Scraping halaman 105 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/14/105
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Psikologi] Habis di halaman 104
+
+=== Mulai scrape prodi Sastra Inggris (id=15) ===
+[Sastra Inggris] Scraping halaman 134 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/15/134
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Sastra Inggris] Habis di halaman 133
+
+=== Mulai scrape prodi Ekonomi Syariah (id=16) ===
+[Ekonomi Syariah] Scraping halaman 114 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/16/114
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Ekonomi Syariah] Habis di halaman 113
+
+=== Mulai scrape prodi Hukum Bisnis Syariah (id=17) ===
+[Hukum Bisnis Syariah] Scraping halaman 84 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/17/84
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Hukum Bisnis Syariah] Habis di halaman 83
+
+=== Mulai scrape prodi PGSD (id=18) ===
+[PGSD] Scraping halaman 184 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/18/184
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[PGSD] Habis di halaman 183
+
+=== Mulai scrape prodi Pendidikan Bhs &amp; Sastra Indonesia (id=27) ===
+[Pendidikan Bhs &amp; Sastra Indonesia] Scraping halaman 74 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/27/74
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Pendidikan Bhs &amp; Sastra Indonesia] Habis di halaman 73
+
+=== Mulai scrape prodi Pendidikan Informatika (id=28) ===
+[Pendidikan Informatika] Scraping halaman 53 -&gt; https://pta.trunojoyo.ac.id/c_search/byprod/28/53
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Scraping dihentikan oleh user. Progress disimpan.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data terakhir berhasil disimpan di C:\Users\Fedi Arta\crawling_pta\pta.csv
+Progress scraping disimpan di C:\Users\Fedi Arta\crawling_pta\progress.json
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>penulis</th>
+      <th>judul</th>
+      <th>pembimbing_pertama</th>
+      <th>pembimbing_kedua</th>
+      <th>abstrak_id</th>
+      <th>abstrak_en</th>
+      <th>prodi</th>
+      <th>url</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Dyah Ayu Citra Seza</td>
+      <td>Implementasi Fungsi Legislasi Dewan Perwakilan...</td>
+      <td>Yudi Widagdo Harimurti, SH., MH</td>
+      <td>Safi', SH., MH</td>
+      <td>ABSTRAK\n\n       Implementasi Fungsi Legislas...</td>
+      <td>ABSTRACT\n       Implementation of Legislation...</td>
+      <td>Ilmu Hukum</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/080...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Maulina Nurlaily</td>
+      <td>Pertanggungjawaban Pidana Direksi BUMN (Perser...</td>
+      <td>Tolib Effendi, SH., MH.</td>
+      <td>Dr. Eni Suastuti, SH., Mhum.</td>
+      <td>Badan Usaha Milik Negara (BUMN) adalah Badan u...</td>
+      <td>State Owned Enterprises (SOEs) are business en...</td>
+      <td>Ilmu Hukum</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/080...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Moh. Samsul Hidayat</td>
+      <td>Analisis Terhadap Kekosongan Hukum dalam Penga...</td>
+      <td>Tolib Effendi, SH., MH.</td>
+      <td>Agus Ramdlany, SH., MH.</td>
+      <td>Kasus narkoba tidak henti-hentinya terdengar d...</td>
+      <td>Drug cases endlessly heard on television, radi...</td>
+      <td>Ilmu Hukum</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/070...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>TOMMY ADITYA PARLINDUNGAN MARBUN</td>
+      <td>PERLINDUNGAN HUKUM BAGI KONSUMEN ATAS PRODUK E...</td>
+      <td>DR. DJULAEKA, S.H., M.HUM</td>
+      <td>DR.USWATUN HASANAH, S.H., M. HUM</td>
+      <td>Produk elektronik adalah suatu benda bergerak ...</td>
+      <td>Electronic products is an object moves through...</td>
+      <td>Ilmu Hukum</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/090...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>RICA YENA IMADHORA</td>
+      <td>TELAAH  KRITIS TENTANG ALASAN HUKUM YANG DIGUN...</td>
+      <td>Dr. DENI SBY, S. H., M. S.</td>
+      <td>SAIFUL ABDULLAH, S. H., M. H.</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Ilmu Hukum</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/070...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>13906</th>
+      <td>Ana fadzila putri</td>
+      <td>PENGARUH MODEL PEMBELAJARAN ARIAS (ASSURANCE, ...</td>
+      <td>Ariesta Kartika Sari, S. Si., M. Pd.</td>
+      <td>Wanda ramansyah, S. Pd., M. Pd.</td>
+      <td>Penelitian ini bertujuan untuk mengetahui peng...</td>
+      <td>Based on the data values ??of class X SMK Agun...</td>
+      <td>Pendidikan Informatika</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/150...</td>
+    </tr>
+    <tr>
+      <th>13907</th>
+      <td>YULIS ROKHMAWATI</td>
+      <td>PENGARUH MODEL PEMBELAJARAN ACCELERATED LEARNI...</td>
+      <td>Sigit Dwi Saputro, S.Pd., M.Pd</td>
+      <td>Muchamad Arif, S.Pd., M.Pd</td>
+      <td>ABSTRAK\n\nPenelitian ini diambil karena adany...</td>
+      <td>ABSTRACT\n \nThis study was taken for their st...</td>
+      <td>Pendidikan Informatika</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/150...</td>
+    </tr>
+    <tr>
+      <th>13908</th>
+      <td>Ni'mah Nadliroh</td>
+      <td>PENGEMBANGAN INSTRUMEN PENILAIAN BERBASIS  HOT...</td>
+      <td>Sigit Dwi Saputro, S.Pd., M.Pd</td>
+      <td>Muhamad Afif Effindi, S.Kom., M.T</td>
+      <td>Penelitian ini bertujuan untuk menghasilkan in...</td>
+      <td>This study aimed to produce HOTS-based assessm...</td>
+      <td>Pendidikan Informatika</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/150...</td>
+    </tr>
+    <tr>
+      <th>13909</th>
+      <td>Fiki Nurwanto</td>
+      <td>PENGEMBANGAN MEDIA PEMBELAJARAN VISUAL 3D MENG...</td>
+      <td>Wanda Ramansyah, S.Pd., M.Pd</td>
+      <td>Medika Risnasari, S.ST., M.T.</td>
+      <td>Penelitian pengembangan ini sebagai penunjang ...</td>
+      <td>This development research supports the lack of...</td>
+      <td>Pendidikan Informatika</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/150...</td>
+    </tr>
+    <tr>
+      <th>13910</th>
+      <td>rizqi mei anggraeni</td>
+      <td>PENGEMBANGAN MEDIA PEMBELAJARAN GAME PUZZLE BE...</td>
+      <td>Wanda Ramansyah. S.Pd., M.Pd.</td>
+      <td>Muhamad Afif Effindi. S.Kom., M.T.</td>
+      <td>Penelitian ini bertujuan untuk mengembangkan m...</td>
+      <td>This study aims to develop learning media base...</td>
+      <td>Pendidikan Informatika</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/150...</td>
+    </tr>
+  </tbody>
+</table>
+<p>13911 rows × 8 columns</p>
+</div></div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Crawling.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Crawling</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Crawling_berita_PPW.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">web struktur</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-link-data-text">Crawling Link data text</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fediarta
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
