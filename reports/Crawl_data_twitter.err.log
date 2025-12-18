@@ -30,8 +30,12 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['# Import required Python package', '!pip install pandas', '', '# Install Node.js (because tweet-harvest built using Node.js)', '!sudo apt-get update']
-...
-['', '!sudo apt-get update', '!sudo apt-get install nodejs -y', '', '!node -v']
+# Crawl Data
+
+filename = 'BBM.csv'
+search_keyword = 'BBM since:2024-04-01 until:2025-11-30 lang:id'
+limit = 1000
+
+!npx -y tweet-harvest@2.6.1 -o "{filename}" -s "{search_keyword}" --tab "LATEST" -l {limit} --token {twitter_auth_token}
 -------------------
 

@@ -424,7 +424,26 @@ document.write(`
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Skipping community as it is not installed.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting python-louvain
+  Using cached python-louvain-0.16.tar.gz (204 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status &#39;done&#39;
+Requirement already satisfied: networkx in c:\users\fedi arta\appdata\local\programs\python\python310\lib\site-packages (from python-louvain) (3.3)
+Requirement already satisfied: numpy in c:\users\fedi arta\appdata\local\programs\python\python310\lib\site-packages (from python-louvain) (1.26.4)
+Building wheels for collected packages: python-louvain
+  Building wheel for python-louvain (setup.py): started
+  Building wheel for python-louvain (setup.py): finished with status &#39;done&#39;
+  Created wheel for python-louvain: filename=python_louvain-0.16-py3-none-any.whl size=9402 sha256=7587d822299829f5386dd6a04345c8c6b6b7b1ea1c1bdcfa1621f171fd3ecc78
+  Stored in directory: c:\users\fedi arta\appdata\local\pip\cache\wheels\d0\b0\d7\6dd26c3817810fa379088eaeb755a01d9a2a411c37632079d1
+Successfully built python-louvain
+Installing collected packages: python-louvain
+Successfully installed python-louvain-0.16
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  DEPRECATION: Building &#39;python-louvain&#39; using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of &#39;python-louvain&#39;. Discussion can be found at https://github.com/pypa/pip/issues/6334
+
+[notice] A new release of pip is available: 25.1.1 -&gt; 25.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
 </pre></div>
 </div>
 </div>
@@ -455,8 +474,36 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading dataset...
-Total Nodes : 4039
-Total Edges : 88234
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">file_path</span> <span class="o">=</span> <span class="s2">&quot;/content/drive/MyDrive/PPW/facebook_combined.txt&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loading dataset...&quot;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">read_edgelist</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">nodetype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total Nodes :&quot;</span><span class="p">,</span> <span class="n">G</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">())</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total Edges :&quot;</span><span class="p">,</span> <span class="n">G</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">())</span>
+
+<span class="nn">File ~\AppData\Local\Programs\Python\Python310\lib\site-packages\networkx\utils\decorators.py:789,</span> in <span class="ni">argmap.__call__.&lt;locals&gt;.func</span><span class="nt">(_argmap__wrapper, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">788</span> <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">__wrapper</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">789</span>     <span class="k">return</span> <span class="n">argmap</span><span class="o">.</span><span class="n">_lazy_compile</span><span class="p">(</span><span class="n">__wrapper</span><span class="p">)(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File &lt;class &#39;networkx.utils.decorators.argmap&#39;&gt; compilation 6:3,</span> in <span class="ni">argmap_read_edgelist_1</span><span class="nt">(path, comments, delimiter, create_using, nodetype, data, edgetype, encoding, backend, **backend_kwargs)</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">bz2</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">collections</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">gzip</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">inspect</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">itertools</span>
+
+<span class="nn">File ~\AppData\Local\Programs\Python\Python310\lib\site-packages\networkx\utils\decorators.py:199,</span> in <span class="ni">open_file.&lt;locals&gt;._open_file</span><span class="nt">(path)</span>
+<span class="g g-Whitespace">    </span><span class="mi">195</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">196</span>     <span class="c1"># could be None, or a file handle, in which case the algorithm will deal with it</span>
+<span class="g g-Whitespace">    </span><span class="mi">197</span>     <span class="k">return</span> <span class="n">path</span><span class="p">,</span> <span class="k">lambda</span><span class="p">:</span> <span class="kc">None</span>
+<span class="ne">--&gt; </span><span class="mi">199</span> <span class="n">fobj</span> <span class="o">=</span> <span class="n">_dispatch_dict</span><span class="p">[</span><span class="n">ext</span><span class="p">](</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">200</span> <span class="k">return</span> <span class="n">fobj</span><span class="p">,</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">fobj</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/content/drive/MyDrive/PPW/facebook_combined.txt&#39;
 </pre></div>
 </div>
 </div>
@@ -1603,6 +1650,7 @@ Jumlah anggota: 548
 </div>
 </div>
 </div>
+<p><a class="reference internal" href="Word_graph_fix.html"><span class="std std-doc">Lanjut ke Wordgraph</span></a></p>
 </section>
 
     <script type="text/x-thebe-config">
